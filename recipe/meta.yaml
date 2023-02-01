@@ -12,7 +12,8 @@ source:
 build:
   # we need egg_dir to avoid overlapping diffpy/__init__.py files.
   preserve_egg_dir: True
-  number: 0
+  noarch: python
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - pdfgui = diffpy.pdfgui.applications.pdfgui:main
@@ -20,13 +21,13 @@ build:
 
 requirements:
   host:
-    - python
+    - python >=3.7
     - pip
   run:
-    - python
+    - python >=3.7
     - setuptools
     - six
-    - matplotlib-base
+    - matplotlib
     - wxpython
     - menuinst  # [win]
     - diffpy.pdffit2
