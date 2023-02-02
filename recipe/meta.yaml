@@ -41,6 +41,11 @@ test:
   commands:
     - pip check
 
+app:
+  entry: pdfgui  # [not win]
+  entry: pythonw -m diffpy.pdfgui.applications.pdfgui  # [win]
+  summary: materials structure analysis from Pair Distribution Function
+
 about:
   home: https://github.com/diffpy/diffpy.pdfgui
   summary: GUI for PDF simulation and structure refinement
