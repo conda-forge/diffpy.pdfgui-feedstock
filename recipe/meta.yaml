@@ -42,8 +42,7 @@ test:
     - pip check
 
 app:
-  entry: pdfgui  # [not win]
-  entry: pythonw -m diffpy.pdfgui.applications.pdfgui  # [win]
+  entry: pythonw -m diffpy.pdfgui.applications.pdfgui
   summary: materials structure analysis from Pair Distribution Function
 
 about:
