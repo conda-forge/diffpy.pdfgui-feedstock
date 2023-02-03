@@ -6,9 +6,8 @@ package:
   version: {{ version }}
 
 source:
-#  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-#  sha256: 0b802041a1ff999d431d46d5c52682c9a3e2c20f09fb5477d59d02d1130e2601
-  git_url: https://github.com/diffpy/diffpy.pdfgui.git
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 0b802041a1ff999d431d46d5c52682c9a3e2c20f09fb5477d59d02d1130e2601
 
 build:
   # we need egg_dir to avoid overlapping diffpy/__init__.py files.
@@ -44,7 +43,7 @@ test:
 
 app:
   entry: pythonw -m diffpy.pdfgui.applications.pdfgui
-  icon: logo.png
+  icon: pdfgui_64x64.png
   summary: materials structure analysis from Pair Distribution Function
 
 about:
