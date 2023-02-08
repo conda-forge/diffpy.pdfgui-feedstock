@@ -6,10 +6,8 @@ package:
   version: {{ version }}
 
 source:
-#  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-#  sha256: 0b802041a1ff999d431d46d5c52682c9a3e2c20f09fb5477d59d02d1130e2601
-  git_rev: v1.4.2
-  git_url: https://github.com/diffpy/diffpy.pdfgui.git
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 6ec696c8b5bfe3fd3e1bbfa71c3799366f9d03856880d08c35875b2184a0e5e5
 
 build:
   # we need egg_dir to avoid overlapping diffpy/__init__.py files.
