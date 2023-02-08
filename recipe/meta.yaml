@@ -21,17 +21,17 @@ build:
 
 requirements:
   host:
-    - python
+    - python python >=3.6
     - pip
   run:
-    - python
+    - python python >=3.6
     - setuptools
     - six
     - matplotlib
     - wxpython
     - menuinst  # [win]
     - diffpy.pdffit2
-    - diffpy.structure >=3
+    - diffpy.structure
     - diffpy.utils
 test:
   imports:
