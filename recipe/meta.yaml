@@ -12,25 +12,25 @@ source:
 build:
   # we need egg_dir to avoid overlapping diffpy/__init__.py files.
   preserve_egg_dir: True
-  number: 1
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  number: 2
+#  script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - pdfgui = diffpy.pdfgui.applications.pdfgui:main
   osx_is_app: True
 
 requirements:
   host:
-    - python
+    - python python >=3.6
     - pip
   run:
-    - python
+    - python python >=3.6
     - setuptools
     - six
     - matplotlib
     - wxpython
     - menuinst  # [win]
     - diffpy.pdffit2
-    - diffpy.structure >=3
+    - diffpy.structure
     - diffpy.utils
 test:
   imports:
