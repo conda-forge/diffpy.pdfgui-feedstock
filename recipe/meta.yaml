@@ -1,5 +1,5 @@
 {% set name = "diffpy.pdfgui" %}
-{% set version = "1.4.3" %}
+{% set version = "1.4.4" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 source:
 #  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   url: https://github.com/diffpy/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: ca93d66fcee4573e0a8240199a0cb8779dcbb110cb9522119428d14a8fa3aee4
+  sha256: df79e276e279d121fb4e8c7b7e16e40bf5d96af1627bb8090ec44331bda2d1ae
 
 build:
   # we need egg_dir to avoid overlapping diffpy/__init__.py files.
