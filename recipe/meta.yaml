@@ -6,8 +6,9 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 6ec696c8b5bfe3fd3e1bbfa71c3799366f9d03856880d08c35875b2184a0e5e5
+#  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://github.com/diffpy/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
+  sha256: 3271d0992fa4e2a96a91f763920c560f32ec811c183b0fdfd86b29e6ea371e1f
 
 build:
   # we need egg_dir to avoid overlapping diffpy/__init__.py files.
