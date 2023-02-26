@@ -19,6 +19,12 @@ build:
     - pdfgui = diffpy.pdfgui.applications.pdfgui:main
   osx_is_app: True
 
+app:
+  entry: pdfgui  # [not win]
+  entry: pythonw -m diffpy.pdfgui.applications.pdfgui  # [win]
+  icon: pdfgui_64x64.png
+  summary: materials structure analysis from Pair Distribution Function
+
 requirements:
   host:
     - python
@@ -33,6 +39,7 @@ requirements:
     - diffpy.pdffit2
     - diffpy.structure >=3
     - diffpy.utils
+
 test:
   imports:
     - diffpy.pdfgui.tui
@@ -41,12 +48,6 @@ test:
     - pip
   commands:
     - pip check
-
-app:
-  entry: pdfgui  # [not win]
-  entry: pythonw -m diffpy.pdfgui.applications.pdfgui  # [win]
-  icon: pdfgui_64x64.png
-  summary: materials structure analysis from Pair Distribution Function
 
 about:
   home: https://github.com/diffpy/diffpy.pdfgui
