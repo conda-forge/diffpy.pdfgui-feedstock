@@ -8,12 +8,12 @@ package:
 source:
 #  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   url: https://github.com/diffpy/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: d18b01787e46e9688f897bc7c445a23426fe9afca3ee36047cae6f0294c44b63
+  sha256: a607ec0f4fa86a21e0b504c685573bcfbb9a132a423a0f66448e52e80e7d3a99
 
 build:
   # we need egg_dir to avoid overlapping diffpy/__init__.py files.
   preserve_egg_dir: True
-  number: 0
+  number: 1
 #  noarch: python
 #  script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
