@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://test.pypi.io/packages/source/d/diffpy_pdfgui/diffpy_pdfgui-{{ version }}.tar.gz
-  sha256: cd64ed0e17de7ec02ce15ca568833f54310c529879ead4189a48954bf7a3902b
+  sha256: a63cc7a652a60b830041fea525bc7160aa4c829ad564018c377c81f6f5bd69ad
 
 build:
   number: 0
