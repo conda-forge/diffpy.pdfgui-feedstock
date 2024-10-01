@@ -37,8 +37,7 @@ requirements:
 
 test:
   imports:
-    - diffpy.pdfgui.tui
-    - diffpy.pdfgui.tests
+    - diffpy.pdfgui
   requires:
     - pip
   commands:
