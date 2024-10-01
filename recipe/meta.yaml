@@ -28,9 +28,9 @@ requirements:
     - setuptools
     - six
     - matplotlib
-    - wxpython =4.2.1=py310h2693ab4_5  # [osx64 and py==310]
-    - wxpython =4.2.1=py311ha82924a_5  # [osx64 and py==311]
-    - wxpython =4.2.1=py312hba984fc_5  # [osx64 and py==312]
+    - wxpython =4.2.1=py310h2693ab4_5  # [osx and py==310]
+    - wxpython =4.2.1=py311ha82924a_5  # [osx and py==311]
+    - wxpython =4.2.1=py312hba984fc_5  # [osx and py==312]
     - wxpython =4.2.1=py310h809cb23_6  # [linux and py==310]
     - wxpython =4.2.1=py311ha420243_6  # [linux and py==311]
     - wxpython =4.2.1=py312h6847026_6  # [linux and py==312]
