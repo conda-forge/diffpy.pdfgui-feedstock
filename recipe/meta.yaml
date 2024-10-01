@@ -46,12 +46,15 @@ requirements:
     - diffpy.utils
 
 test:
-  imports:
-    - diffpy.pdfgui.applications.pdfgui
   requires:
     - pip
+    - pytest
+  source_files:
+    - tests
   commands:
-    - pip check
+    - conda list
+    - pip list
+    - pytest
 
 app:
   entry: pdfgui  # [not win]
