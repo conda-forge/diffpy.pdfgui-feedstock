@@ -9,7 +9,8 @@ source:
   url: https://test.pypi.io/packages/source/d/diffpy_pdfgui/diffpy_pdfgui-{{ version }}.tar.gz
   sha256: cd64ed0e17de7ec02ce15ca568833f54310c529879ead4189a48954bf7a3902b
 
-build:
+requirements:
+  build:
   # we need egg_dir to avoid overlapping diffpy/__init__.py files.
   preserve_egg_dir: true
   number: 0
