@@ -1,2 +1,6 @@
 channel_targets:
   - conda-forge diffpy.pdfgui_rc
+python:
+  - 3.12
+  - 3.11
+  - 3.10

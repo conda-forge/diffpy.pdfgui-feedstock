@@ -10,8 +10,6 @@ source:
   sha256: cd64ed0e17de7ec02ce15ca568833f54310c529879ead4189a48954bf7a3902b
 
 build:
-  # we need egg_dir to avoid overlapping diffpy/__init__.py files.
-  preserve_egg_dir: true
   number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
