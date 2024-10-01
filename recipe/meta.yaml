@@ -31,15 +31,15 @@ requirements:
     - setuptools
     - six
     - matplotlib
-    - wxpython =4.2.1=py310h2693ab4_5  # [osx64 and py310]
-    - wxpython =4.2.1=py311ha82924a_5  # [osx64 and py311]
-    - wxpython =4.2.1=py312hba984fc_5  # [osx64 and py312]
-    - wxpython =4.2.1=py310h8348223_5  # [linux and py310]
-    - wxpython =4.2.1=py311h35114c6_5  # [linux and py311]
-    - wxpython =4.2.1=py312h7c8d89b_5  # [linux and py312]
-    - wxpython =4.2.1=py310h00ffb61_5  # [win and py310]
-    - wxpython =4.2.1=py311h12c1d0e_5  # [win and py311]
-    - wxpython =4.2.1=py312h53d5487_5  # [win and py312]
+    - wxpython =4.2.1=py310h2693ab4_5  # [osx64 and py==310]
+    - wxpython =4.2.1=py311ha82924a_5  # [osx64 and py==311]
+    - wxpython =4.2.1=py312hba984fc_5  # [osx64 and py==312]
+    - wxpython =4.2.1=py310h8348223_5  # [linux and py==310]
+    - wxpython =4.2.1=py311h35114c6_5  # [linux and py==311]
+    - wxpython =4.2.1=py312h7c8d89b_5  # [linux and py==312]
+    - wxpython =4.2.1=py310h00ffb61_5  # [win and py==310]
+    - wxpython =4.2.1=py311h12c1d0e_5  # [win and py==311]
+    - wxpython =4.2.1=py312h53d5487_5  # [win and py==312]
     - menuinst  # [win]
     - diffpy.pdffit2
     - diffpy.structure
