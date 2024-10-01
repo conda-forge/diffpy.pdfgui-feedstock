@@ -28,6 +28,7 @@ requirements:
     - python >=3.10
     - setuptools
     - matplotlib
+    - matplotlib-base
     - wxpython
     - menuinst  # [win]
     - diffpy.pdffit2

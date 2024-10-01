@@ -2,3 +2,9 @@ github:
   branch_name: main
   tooling_branch_name: main
 conda_forge_output_validation: true
+conda_build:
+  pkg_format: '2'
+build_platform:
+    linux_64: linux_64  # Standard 64-bit Linux
+    win_64: win_64
+    osx_64: osx_64
