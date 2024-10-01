@@ -13,6 +13,7 @@ build:
   # we need egg_dir to avoid overlapping diffpy/__init__.py files.
   preserve_egg_dir: true
   number: 0
+  skip: true  # [py<310]
   noarch: python
   script: python -m pip install --no-deps --ignore-installed .
   entry_points:
@@ -21,11 +22,11 @@ build:
 
 requirements:
   host:
-    - python >=3.10
+    - python
     - pip
     - setuptools
   run:
-    - python >=3.10
+    - python
     - setuptools
     - matplotlib-base
     - wxpython
