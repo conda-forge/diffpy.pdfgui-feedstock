@@ -36,7 +36,7 @@ requirements:
     - wxpython =4.2.1=py312hba984fc_5  # [osx64 and py==312]
     - wxpython =4.2.1=py310h8348223_5  # [linux and py==310]
     - wxpython =4.2.1=py311h35114c6_5  # [linux and py==311]
-    - wxpython =4.2.1=py312h7c8d89b_5  # [linux and py==312]
+    - wxpython =4.2.1=py312h6847026_6  # [linux and py==312]
     - wxpython =4.2.1=py310h00ffb61_5  # [win and py==310]
     - wxpython =4.2.1=py311h12c1d0e_5  # [win and py==311]
     - wxpython =4.2.1=py312h53d5487_5  # [win and py==312]
