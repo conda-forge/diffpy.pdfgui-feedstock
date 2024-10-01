@@ -13,7 +13,7 @@ build:
   # we need egg_dir to avoid overlapping diffpy/__init__.py files.
   preserve_egg_dir: true
   number: 0
-  skip: true  # [py<310 or py>311]
+  skip: true  # [py<310]
 #  noarch: python
 #  script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
@@ -33,10 +33,12 @@ requirements:
     - matplotlib
     - wxpython =4.2.1=py310h2693ab4_5  # [osx64 and py==310]
     - wxpython =4.2.1=py311ha82924a_5  # [osx64 and py==311]
+    - wxpython =4.2.1=py312hba984fc_5  # [osx64 and py==312]
     - wxpython =4.2.1=py310h8348223_5  # [linux and py==310]
     - wxpython =4.2.1=py311h35114c6_5  # [linux and py==311]
     - wxpython =4.2.1=py310h00ffb61_5  # [win and py==310]
     - wxpython =4.2.1=py311h12c1d0e_5  # [win and py==311]
+    - wxpython =4.2.1=py312h53d5487_5  # [win and py==312]
     - menuinst  # [win]
     - diffpy.pdffit2
     - diffpy.structure
