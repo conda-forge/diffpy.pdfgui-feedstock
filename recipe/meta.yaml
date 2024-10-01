@@ -27,12 +27,11 @@ requirements:
   run:
     - python
     - setuptools
-    - six
-    - matplotlib
+    - matplotlib-base
     - wxpython
     - menuinst  # [win]
     - diffpy.pdffit2
-    - diffpy.structure >=3
+    - diffpy.structure
     - diffpy.utils
 
 test:
