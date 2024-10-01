@@ -1,21 +1,18 @@
 {% set name = "diffpy.pdfgui" %}
-{% set version = "3.0.5" %}
+{% set version = "0.0.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-#  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  url: https://github.com/diffpy/{{ name }}/archive/refs/tags/{{ version }}.tar.gz
-  sha256: ca07f557997173221dacc94f9b50fb8441e3d5755e01192b4ae0f28a0cea68b2
+  url: https://test.pypi.io/packages/source/d/diffpy_pdfgui/diffpy_pdfgui-{{ version }}.tar.gz
+  sha256: cd64ed0e17de7ec02ce15ca568833f54310c529879ead4189a48954bf7a3902b
 
 build:
-  # we need egg_dir to avoid overlapping diffpy/__init__.py files.
-  preserve_egg_dir: true
-  number: 2
-#  noarch: python
-#  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  number: 0
+  skip: true  # [py<310 or win]
+  script: python -m pip install --no-deps --ignore-installed .  # [not win]
   entry_points:
     - pdfgui = diffpy.pdfgui.applications.pdfgui:main
   osx_is_app: true
@@ -24,25 +21,37 @@ requirements:
   host:
     - python
     - pip
+    - setuptools
+    - setuptools-git-versioning >=2.0
   run:
     - python
     - setuptools
     - six
     - matplotlib
-    - wxpython
+    - wxpython =4.2.1=py310h2693ab4_5  # [osx64 and py==310]
+    - wxpython =4.2.1=py311ha82924a_5  # [osx64 and py==311]
+    - wxpython =4.2.1=py312hba984fc_5  # [osx64 and py==312]
+    - wxpython =4.2.1=py310h809cb23_6  # [linux and py==310]
+    - wxpython =4.2.1=py311ha420243_6  # [linux and py==311]
+    - wxpython =4.2.1=py312h6847026_6  # [linux and py==312]
+    - wxpython =4.2.1=py310h00ffb61_5  # [win and py==310]
+    - wxpython =4.2.1=py311h12c1d0e_5  # [win and py==311]
+    - wxpython =4.2.1=py312h53d5487_5  # [win and py==312]
     - menuinst  # [win]
     - diffpy.pdffit2
-    - diffpy.structure >=3
+    - diffpy.structure
     - diffpy.utils
 
-test:
-  imports:
-    - diffpy.pdfgui.tui
-    - diffpy.pdfgui.tests
+test: 
   requires:
     - pip
+    - pytest
+  source_files:
+    - tests
   commands:
-    - pip check
+    - conda list
+    - pip list
+    - pytest
 
 app:
   entry: pdfgui  # [not win]
@@ -55,7 +64,7 @@ about:
   summary: GUI for PDF simulation and structure refinement
   license: BSD-3-Clause
   license_family: BSD
-  license_file: LICENSE.txt
+  license_file: LICENSE.rst
   description: |
     The diffpy.pdfgui package provides a graphical user interface to pdffit2 refinement engine, 
     with many powerful extensions. It is a GUI program for structure refinements to atomic pair 

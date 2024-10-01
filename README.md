@@ -38,87 +38,45 @@ Current build status
         <table>
           <thead><tr><th>Variant</th><th>Status</th></tr></thead>
           <tbody><tr>
-              <td>linux_64_python3.10</td>
+              <td>linux_64_python3.10.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=18426&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/diffpy.pdfgui-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_python3.10" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/diffpy.pdfgui-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_python3.10.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_python3.11</td>
+              <td>linux_64_python3.11.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=18426&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/diffpy.pdfgui-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_python3.11" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/diffpy.pdfgui-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_python3.11.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_python3.8</td>
+              <td>linux_64_python3.12.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=18426&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/diffpy.pdfgui-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_python3.8" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/diffpy.pdfgui-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_python3.12.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_python3.9</td>
+              <td>osx_64_python3.10.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=18426&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/diffpy.pdfgui-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_python3.9" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/diffpy.pdfgui-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_python3.10.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_python3.10</td>
+              <td>osx_64_python3.11.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=18426&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/diffpy.pdfgui-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_python3.10" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/diffpy.pdfgui-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_python3.11.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_python3.11</td>
+              <td>osx_64_python3.12.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=18426&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/diffpy.pdfgui-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_python3.11" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_64_python3.8</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=18426&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/diffpy.pdfgui-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_python3.8" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_64_python3.9</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=18426&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/diffpy.pdfgui-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_python3.9" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>win_64_python3.10</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=18426&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/diffpy.pdfgui-feedstock?branchName=main&jobName=win&configuration=win%20win_64_python3.10" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>win_64_python3.11</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=18426&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/diffpy.pdfgui-feedstock?branchName=main&jobName=win&configuration=win%20win_64_python3.11" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>win_64_python3.8</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=18426&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/diffpy.pdfgui-feedstock?branchName=main&jobName=win&configuration=win%20win_64_python3.8" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>win_64_python3.9</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=18426&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/diffpy.pdfgui-feedstock?branchName=main&jobName=win&configuration=win%20win_64_python3.9" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/diffpy.pdfgui-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_python3.12.____cpython" alt="variant">
                 </a>
               </td>
             </tr>
@@ -139,14 +97,14 @@ Current release info
 Installing diffpy.pdfgui
 ========================
 
-Installing `diffpy.pdfgui` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
+Installing `diffpy.pdfgui` from the `conda-forge/label/diffpy.pdfgui_rc` channel can be achieved by adding `conda-forge/label/diffpy.pdfgui_rc` to your channels with:
 
 ```
-conda config --add channels conda-forge
+conda config --add channels conda-forge/label/diffpy.pdfgui_rc
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `diffpy.pdfgui` can be installed with `conda`:
+Once the `conda-forge/label/diffpy.pdfgui_rc` channel has been enabled, `diffpy.pdfgui` can be installed with `conda`:
 
 ```
 conda install diffpy.pdfgui
@@ -161,26 +119,26 @@ mamba install diffpy.pdfgui
 It is possible to list all of the versions of `diffpy.pdfgui` available on your platform with `conda`:
 
 ```
-conda search diffpy.pdfgui --channel conda-forge
+conda search diffpy.pdfgui --channel conda-forge/label/diffpy.pdfgui_rc
 ```
 
 or with `mamba`:
 
 ```
-mamba search diffpy.pdfgui --channel conda-forge
+mamba search diffpy.pdfgui --channel conda-forge/label/diffpy.pdfgui_rc
 ```
 
 Alternatively, `mamba repoquery` may provide more information:
 
 ```
 # Search all versions available on your platform:
-mamba repoquery search diffpy.pdfgui --channel conda-forge
+mamba repoquery search diffpy.pdfgui --channel conda-forge/label/diffpy.pdfgui_rc
 
 # List packages depending on `diffpy.pdfgui`:
-mamba repoquery whoneeds diffpy.pdfgui --channel conda-forge
+mamba repoquery whoneeds diffpy.pdfgui --channel conda-forge/label/diffpy.pdfgui_rc
 
 # List dependencies of `diffpy.pdfgui`:
-mamba repoquery depends diffpy.pdfgui --channel conda-forge
+mamba repoquery depends diffpy.pdfgui --channel conda-forge/label/diffpy.pdfgui_rc
 ```
 
 
@@ -250,6 +208,7 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@bobleesj](https://github.com/bobleesj/)
 * [@dragonyanglong](https://github.com/dragonyanglong/)
 * [@sbillinge](https://github.com/sbillinge/)
 
