@@ -54,7 +54,7 @@ about:
   summary: GUI for PDF simulation and structure refinement
   license: BSD-3-Clause
   license_family: BSD
-  license_file: LICENSE.txt
+  license_file: LICENSE.rst
   description: |
     The diffpy.pdfgui package provides a graphical user interface to pdffit2 refinement engine, 
     with many powerful extensions. It is a GUI program for structure refinements to atomic pair 
