@@ -6,11 +6,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://test.pypi.io/packages/source/d/diffpy_pdfgui/diffpy_pdfgui-{{ version }}.tar.gz
-  sha256: a63cc7a652a60b830041fea525bc7160aa4c829ad564018c377c81f6f5bd69ad
+  url: https://pypi.io/packages/source/d/diffpy_pdfgui/diffpy_pdfgui-{{ version }}.tar.gz
+  sha256: 6b4763f042abc59d299d9c84d97efe077930167dd0d6a5b171a8ba843779f93a
 
 build:
-  number: 0
+  number: 1
   skip: true  # [py<310 or linux]
   script: python -m pip install --no-deps --ignore-installed .  # [not win]
   entry_points:
