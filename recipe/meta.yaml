@@ -11,7 +11,7 @@ source:
 
 build:
   number: 1
-  skip: true  # [py<310 or linux]
+  skip: true  # [py<310]
   script: python -m pip install --no-deps --ignore-installed .  # [not win]
   entry_points:
     - pdfgui = diffpy.pdfgui.applications.pdfgui:main
@@ -28,12 +28,7 @@ requirements:
     - setuptools
     - six
     - matplotlib
-    - wxpython =4.2.1=py310h2693ab4_5  # [osx and py==310]
-    - wxpython =4.2.1=py311ha82924a_5  # [osx and py==311]
-    - wxpython =4.2.1=py312hba984fc_5  # [osx and py==312]
-    - wxpython =4.2.1=py310h00ffb61_5  # [win and py==310]
-    - wxpython =4.2.1=py311h12c1d0e_5  # [win and py==311]
-    - wxpython =4.2.1=py312h53d5487_5  # [win and py==312]
+    - wxpython
     - menuinst  # [win]
     - diffpy.pdffit2
     - diffpy.structure
