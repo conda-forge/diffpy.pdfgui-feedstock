@@ -27,7 +27,7 @@ requirements:
     - python
     - setuptools
     - six
-    - matplotlib
+    - matplotlib-base
     - wxpython
     - menuinst  # [win]
     - diffpy.pdffit2
