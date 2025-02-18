@@ -11,38 +11,42 @@ source:
   sha256: 2ac7c32f2c3687a063757db4d035d4d309c80f05498f468a8b9fa77c91462c2f
 
 build:
-  # we need egg_dir to avoid overlapping diffpy/__init__.py files.
-  preserve_egg_dir: true
+  noarch: python
   number: 0
-#  noarch: python
-#  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - pdfgui = diffpy.pdfgui.applications.pdfgui:main
   osx_is_app: true
 
 requirements:
   host:
-    - python
+    - python {{ python_min }}
+    - setuptools
+    - setuptools-git-versioning >=2.0
     - pip
   run:
-    - python
-    - setuptools
-    - six
-    - matplotlib
+    - python >={{ python_min }}
+    - numpy
     - wxpython
     - menuinst  # [win]
     - diffpy.pdffit2
     - diffpy.structure >=3
     - diffpy.utils
+    - matplotlib-base
 
-test:
-  imports:
-    - diffpy.pdfgui.tui
-    - diffpy.pdfgui.tests
+test: 
   requires:
     - pip
+    - pytest
+    - pytest-mock
+    - freezegun
+    - python {{ python_min }}
+  source_files:
+    - tests
   commands:
     - pip check
+    - pip list
+    - pytest
 
 app:
   entry: pdfgui  # [not win]
@@ -53,9 +57,8 @@ app:
 about:
   home: https://github.com/diffpy/diffpy.pdfgui
   summary: GUI for PDF simulation and structure refinement
-  license: BSD-3-Clause
-  license_family: BSD
-  license_file: LICENSE.txt
+  license: Free To Use But Restricted
+  license_file: LICENSE.rst
   description: |
     The diffpy.pdfgui package provides a graphical user interface to pdffit2 refinement engine, 
     with many powerful extensions. It is a GUI program for structure refinements to atomic pair 
