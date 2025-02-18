@@ -1,21 +1,21 @@
 {% set name = "diffpy.pdfgui" %}
-{% set version = "3.0.5" %}
+{% set version = "3.1.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-#  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  url: https://github.com/diffpy/{{ name }}/archive/refs/tags/{{ version }}.tar.gz
-  sha256: ca07f557997173221dacc94f9b50fb8441e3d5755e01192b4ae0f28a0cea68b2
+  url: https://pypi.org/packages/source/d/diffpy_pdfgui/diffpy_pdfgui-{{ version }}.tar.gz
+  # url: https://github.com/diffpy/{{ name }}/archive/refs/tags/{{ version }}.tar.gz
+  sha256: 2ac7c32f2c3687a063757db4d035d4d309c80f05498f468a8b9fa77c91462c2f
 
 build:
-  # we need egg_dir to avoid overlapping diffpy/__init__.py files.
-  preserve_egg_dir: true
-  number: 2
-#  noarch: python
-#  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  # PDFgui not released as noarch despite having no C code
+  # noarch: python
+  number: 0
+  skip: true  # [py<311]
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - pdfgui = diffpy.pdfgui.applications.pdfgui:main
   osx_is_app: true
@@ -23,26 +23,33 @@ build:
 requirements:
   host:
     - python
+    - setuptools
+    - setuptools-git-versioning >=2.0
     - pip
   run:
     - python
-    - setuptools
-    - six
-    - matplotlib
+    - numpy
     - wxpython
     - menuinst  # [win]
     - diffpy.pdffit2
     - diffpy.structure >=3
     - diffpy.utils
+    - matplotlib-base
 
-test:
-  imports:
-    - diffpy.pdfgui.tui
-    - diffpy.pdfgui.tests
+test: 
   requires:
     - pip
+    - pytest
+    - pytest-mock
+    - freezegun
+    - python
+  source_files:
+    - tests
   commands:
     - pip check
+    - pip list
+    # FIXME: run pytest tests in headless
+    # - pytest
 
 app:
   entry: pdfgui  # [not win]
@@ -53,9 +60,8 @@ app:
 about:
   home: https://github.com/diffpy/diffpy.pdfgui
   summary: GUI for PDF simulation and structure refinement
-  license: BSD-3-Clause
-  license_family: BSD
-  license_file: LICENSE.txt
+  license: Free To Use But Restricted
+  license_file: LICENSE.rst
   description: |
     The diffpy.pdfgui package provides a graphical user interface to pdffit2 refinement engine, 
     with many powerful extensions. It is a GUI program for structure refinements to atomic pair 
