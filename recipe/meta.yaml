@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/d/diffpy_pdfgui/diffpy_pdfgui-{{ version }}.tar.gz
   # url: https://github.com/diffpy/{{ name }}/archive/refs/tags/{{ version }}.tar.gz
   sha256: 2ac7c32f2c3687a063757db4d035d4d309c80f05498f468a8b9fa77c91462c2f
 
