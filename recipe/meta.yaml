@@ -21,9 +21,11 @@ build:
   osx_is_app: true
 
 requirements:
-  host:
+  build:
     - python                              # [build_platform != target_platform]
     - cross-python_{{ target_platform }}  # [build_platform != target_platform]
+  host:
+    - python
     - setuptools
     - setuptools-git-versioning >=2.0
     - pip
