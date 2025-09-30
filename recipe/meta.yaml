@@ -11,9 +11,9 @@ source:
   sha256: 2ac7c32f2c3687a063757db4d035d4d309c80f05498f468a8b9fa77c91462c2f
 
 build:
+  skip: true  # [py<311]
   # PDFgui not released as noarch despite having no C code
   # noarch: python
-  skip: true  # [py<311]
   number: 2
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
@@ -22,8 +22,8 @@ build:
 
 requirements:
   host:
+    - python                              # [build_platform != target_platform]
     - cross-python_{{ target_platform }}  # [build_platform != target_platform]
-    - python  # [build_platform != target_platform]
     - setuptools
     - setuptools-git-versioning >=2.0
     - pip
