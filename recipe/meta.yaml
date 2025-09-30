@@ -13,6 +13,7 @@ source:
 build:
   # PDFgui not released as noarch despite having no C code
   # noarch: python
+  skip: true  # [py<311]
   number: 2
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
@@ -21,12 +22,12 @@ build:
 
 requirements:
   host:
-    - python {{ python_min }}
+    - python
     - setuptools
     - setuptools-git-versioning >=2.0
     - pip
   run:
-    - python >={{ python_min }}
+    - python
     - numpy
     - wxpython
     - menuinst  # [win]
@@ -41,7 +42,7 @@ test:
     - pytest
     - pytest-mock
     - freezegun
-    - python {{ python_min }}
+    - python
   source_files:
     - tests
   commands:
