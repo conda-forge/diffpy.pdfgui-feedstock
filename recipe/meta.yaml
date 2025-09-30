@@ -21,12 +21,12 @@ build:
 
 requirements:
   host:
-    - python
+    - python {{ python_min }}
     - setuptools
     - setuptools-git-versioning >=2.0
     - pip
   run:
-    - python
+    - python >={{ python_min }}
     - numpy
     - wxpython
     - menuinst  # [win]
@@ -41,7 +41,7 @@ test:
     - pytest
     - pytest-mock
     - freezegun
-    - python
+    - python {{ python_min }}
   source_files:
     - tests
   commands:
@@ -59,7 +59,7 @@ app:
 about:
   home: https://github.com/diffpy/diffpy.pdfgui
   summary: GUI for PDF simulation and structure refinement
-  license: Free To Use But Restricted
+  license: BSD-3-Clause
   license_file: LICENSE.rst
   description: |
     The diffpy.pdfgui package provides a graphical user interface to pdffit2 refinement engine, 
