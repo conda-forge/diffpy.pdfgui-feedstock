@@ -11,15 +11,19 @@ source:
   sha256: 2ac7c32f2c3687a063757db4d035d4d309c80f05498f468a8b9fa77c91462c2f
 
 build:
+  skip: true  # [py<311]
   # PDFgui not released as noarch despite having no C code
   # noarch: python
-  number: 1
+  number: 2
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - pdfgui = diffpy.pdfgui.applications.pdfgui:main
   osx_is_app: true
 
 requirements:
+  build:
+    - python                              # [build_platform != target_platform]
+    - cross-python_{{ target_platform }}  # [build_platform != target_platform]
   host:
     - python
     - setuptools
@@ -59,7 +63,7 @@ app:
 about:
   home: https://github.com/diffpy/diffpy.pdfgui
   summary: GUI for PDF simulation and structure refinement
-  license: Free To Use But Restricted
+  license: BSD-3-Clause
   license_file: LICENSE.rst
   description: |
     The diffpy.pdfgui package provides a graphical user interface to pdffit2 refinement engine, 
